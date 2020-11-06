@@ -189,8 +189,9 @@ function validatePostId(req, res, next) {
     })
   }
 
-const PORT = 5000
+require('dotenv').config()
+const port = process.env.PORT;
 
-server.listen(PORT, () => {
-    console.log('Server is running on http://localhost:5000')
+server.listen(port , () => {
+    console.log(`Server is running on http://localhost:${port}`)
 })
